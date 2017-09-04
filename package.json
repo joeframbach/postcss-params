@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest --coverage --verbose"
   },
+  "engines": {
+    "node": ">=6.4"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
