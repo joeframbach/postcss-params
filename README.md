@@ -10,13 +10,14 @@
 `postcss-params` has two usage modes:
 
 1. Target devices/clients based on a build configuration, much like media queries.
-2. Pass strings from css to your postcss plugin, using a familiar syntax.
+2. Pass strings from css to your PostCSS plugin, using a familiar syntax.
 
 Some sites serve different assets to different clients.
 For example, you may have some IE-specific css hacks that you only want to serve to IE browsers.
 Or you want to load certain fonts for certain countries.
 PostCSS is a good way to keep all your code in one file, then generate separate assets.
 
+```scss
     @my-plugin (browser: ie) {
       button {
         background-color: red;
@@ -27,6 +28,7 @@ PostCSS is a good way to keep all your code in one file, then generate separate 
         background-color: green;
       }
     }
+```
 
 `postcss-params` helps you write a plugin which reads the `(browser: ie)` parameter string, and keep or discard the block accordingly.
 
@@ -47,7 +49,7 @@ and returns `true` if the params match the configuration, and
 See the tests in `tests/buildComparator` for more examples.
 
 CSS:
-
+```scss
     @my-plugin (region: cn) {
       body {
         font-family: ".PingFang-SC-Regular", sans-serif;
@@ -58,9 +60,10 @@ CSS:
         font-family: "Helvetica Neue", Arial, sans-serif !default;
       }
     }
+```
 
 Plugin:
-
+```js
     const { buildComparator } = require('postcss-params');
     postcss.plugin('my-plugin', (configuration) => (root) => {
       root.walkAtRules('my-plugin', (atRule) => {
@@ -72,19 +75,21 @@ Plugin:
         }
       });
     });
+```
 
-Running postcss with various configuration objects will result in css assets
+Running PostCSS with various configuration objects will result in css assets
 suitable for separate intended audiences. For example, you may serve a different font-family in China, but not want to load this asset for all countries.
 
 `configuration` is provided to PostCSS through your build tool.
 
 Example configuration:
-
+```js
     {
       debug:  true,
       region: "us",
       theme:  "blue"
     }
+```
 
 ---
 
@@ -93,15 +98,16 @@ Example configuration:
 `buildAst` gives you finer control and access to the params written in css.
 
 Given this simple rule:
-
+```scss
     @my-plugin (theme: red) {
       body {
         background-color: theme-color;
       }
     }
+```
 
 and this plugin:
-
+```js
     const { buildAst } = require('postcss-params');
     postcss.plugin('my-plugin', (configuration) => (root) => {
       root.walkAtRules('my-plugin', (atRule) => {
@@ -109,15 +115,17 @@ and this plugin:
         console.log(ast);
       });
     });
+```
 
 This AST is generated:
-
+```js
     { feature: "theme", value: "red" }
+```
 
 ---
 
 Given this more complicated rule:
-
+```scss
     @my-plugin (debug),
                (region: cn) and (theme: red),
                (region: us) and (theme: blue),
@@ -126,9 +134,10 @@ Given this more complicated rule:
         background-color: red;
       }
     }
+```
 
 Plugin:
-
+```js
     const { buildAst } = require('postcss-params');
     postcss.plugin('my-plugin', (configuration) => (root) => {
       root.walkAtRules('my-plugin', (atRule) => {
@@ -136,6 +145,7 @@ Plugin:
         console.log(ast);
       });
     });
+```
 
 This AST is generated:
 
@@ -176,6 +186,7 @@ nodes in this tree:
 
   Given this contrived rule:
 
+```scss
       @my-plugin (debug),
                  (region: cn) and (theme: red),
                  (region: us) and (theme: blue),
@@ -184,6 +195,7 @@ nodes in this tree:
           background-color: red;
         }
       }
+```
 
 This AST is generated:
 
