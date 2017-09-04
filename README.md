@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/joeframbach/postcss-params.png?branch=master)](https://travis-ci.org/joeframbach/postcss-params)
+
 # PostCSS Params
 
 `postcss-params` has two usage modes:
