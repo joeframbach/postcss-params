@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --verbose"
+    "test": "jest",
+    "test:cover": "jest --coverage && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
   },
   "engines": {
     "node": ">=6.4"
@@ -12,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "coveralls": "^2.13.1",
     "eslint": "^4.6.0",
     "eslint-plugin-prettier": "^2.2.0",
     "jest": "^20.0.4",
