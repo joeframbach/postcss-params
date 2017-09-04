@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/joeframbach/postcss-params.png?branch=master)](https://travis-ci.org/joeframbach/postcss-params)
+[![Coverage Status](https://coveralls.io/repos/github/joeframbach/postcss-params/badge.svg?branch=master)](https://coveralls.io/github/joeframbach/postcss-params?branch=master)
 
 # PostCSS Params
 
