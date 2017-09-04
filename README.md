@@ -1,9 +1,9 @@
-[![npm version](https://badge.fury.io/js/postcss-params.svg)](https://www.npmjs.com/package/postcss-params)
-[![Build Status](https://travis-ci.org/joeframbach/postcss-params.png?branch=master)](https://travis-ci.org/joeframbach/postcss-params)
-[![Coverage Status](https://coveralls.io/repos/github/joeframbach/postcss-params/badge.svg?branch=master)](https://coveralls.io/github/joeframbach/postcss-params?branch=master)
-[![Code Climate](https://codeclimate.com/github/joeframbach/postcss-params/badges/gpa.svg)](https://codeclimate.com/github/joeframbach/postcss-params)
-[![dependencies Status](https://david-dm.org/joeframbach/postcss-params/status.svg)](https://david-dm.org/joeframbach/postcss-params)
-[![devDependencies Status](https://david-dm.org/joeframbach/postcss-params/dev-status.svg)](https://david-dm.org/joeframbach/postcss-params?type=dev)
+[![npm version](https://img.shields.io/npm/v/postcss-params.svg)](https://www.npmjs.com/package/postcss-params)
+[![Build Status](https://img.shields.io/travis/joeframbach/postcss-params.svg)](https://travis-ci.org/joeframbach/postcss-params)
+[![Coverage Status](https://img.shields.io/coveralls/joeframbach/postcss-params.svg)](https://coveralls.io/github/joeframbach/postcss-params?branch=master)
+[![Code Climate](https://img.shields.io/codeclimate/github/joeframbach/postcss-params.svg)](https://codeclimate.com/github/joeframbach/postcss-params)
+[![dependencies Status](https://img.shields.io/david/joeframbach/postcss-params.svg)](https://david-dm.org/joeframbach/postcss-params)
+[![devDependencies Status](https://img.shields.io/david/dev/joeframbach/postcss-params.svg)](https://david-dm.org/joeframbach/postcss-params?type=dev)
 
 # PostCSS Params
 
