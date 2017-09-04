@@ -1,6 +1,6 @@
 {
   "name": "postcss-params",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse media-query-like params into PostCSS plugins",
   "main": "index.js",
   "scripts": {
