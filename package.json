@@ -1,7 +1,7 @@
 {
   "name": "postcss-params",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Parse media-query-like params into PostCSS plugins",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -10,8 +10,8 @@
   "engines": {
     "node": ">=6.4"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Joe Frambach",
+  "license": "MIT",
   "devDependencies": {
     "coveralls": "^2.13.1",
     "eslint": "^4.6.0",
