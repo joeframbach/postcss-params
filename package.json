@@ -1,0 +1,17 @@
+{
+  "name": "postcss-params",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.6.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "jest": "^20.0.4",
+    "prettier": "^1.6.1"
+  }
+}
